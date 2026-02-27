@@ -9,26 +9,9 @@ st.set_page_config(page_title="Pace Pro", page_icon="⚡")
 # 2. FORCE COLORS WITH CSS
 st.markdown("""
     <style>
-    /* Main Background */
-    .stApp {
-        background-color: #FFFFFF;
-    }
-    /* Title and Header Color (Red) */
-    h1, h2, h3 {
-        color: #e63946 !important;
-        font-family: 'Helvetica', sans-serif;
-    }
-    /* Style the Tables */
-    div[data-testid="stTable"] {
-        border: 2px solid #f1f1f1;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    /* Table Header Color (Blue) */
-    thead tr th {
-        background-color: #457b9d !important;
-        color: white !important;
-    }
+    .stApp { background-color: #FFFFFF; }
+    h1, h2, h3 { color: #e63946 !important; }
+    thead tr th { background-color: #457b9d !important; color: white !important; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -104,3 +87,4 @@ if ten_k_input:
         st.download_button("📥 Download All Paces (CSV)", data=csv_data, file_name=f"PacePro_{ten_k_input}.csv", mime='text/csv')
     else:
         st.error("Please enter a valid time (e.g., 61:00)")
+
